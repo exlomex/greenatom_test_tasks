@@ -1,0 +1,36 @@
+.Header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  margin-top: 10px;
+  margin-bottom: 30px;
+
+  .header_title {
+    text-align: center;
+    color: #151515;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+
+  .todoActions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 10px;
+
+    .firstRowButtons {
+      display: flex;
+      justify-content: space-between;
+      gap: 0 10px;
+    }
+
+    .secondRowButtons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+  }
+}
