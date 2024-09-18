@@ -15,19 +15,16 @@ export const Todo = memo(observer(() => {
         todoSlice.removeTodo(id)
     }
 
-    const handleEditTodo = (id: string) => {
-        todoSlice.updateTodo(todoSlice.newTitle, id);
-        todoSlice.setNewTitle('');
-    }
     const handleChangeTodo = (id: string, edit: boolean) => () => {
         if (edit) {
             if (todoSlice.newTitle.trim().length) {
-                handleEditTodo(id)
+                todoSlice.updateTodo(todoSlice.newTitle, id);
+                todoSlice.setNewTitle('');
             }
         } else {
             todoSlice.todos.forEach(todo => {
                 if (todo.edit) todo.edit = !todo.edit;
-                handleEditTodo(id)
+                todoSlice.setNewTitle('');
             })
         }
         todoSlice.toggleEditFlag(id);
