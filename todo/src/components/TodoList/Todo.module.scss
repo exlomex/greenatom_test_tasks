@@ -19,6 +19,10 @@
     justify-content: space-between;
     gap: 0 20px;
 
+    &.selected {
+      background-color: #d7d7d7;
+    }
+
     .todoTitle {
       overflow: hidden;
       max-width: 300px;

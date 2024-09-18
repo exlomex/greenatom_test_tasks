@@ -7,17 +7,6 @@ import {ButtonColorTypes} from "@/components/Button/Button";
 import {Input} from "@/components/Input";
 
 export const Todo = memo(observer(() => {
-    const todos = todoSlice.todos.filter((todo, index) => {
-        if (todoSlice.evenFilter) {
-            if ((index + 1) % 2 === 0) return todo
-            return
-        } else if (todoSlice.oddFilter) {
-            if ((index + 1) % 2 !== 0) return todo
-            return
-        }
-        return todo
-    })
-
     const handleCompleteTodo = (id: string) => () => {
         todoSlice.completeTodo(id)
     }
@@ -46,8 +35,10 @@ export const Todo = memo(observer(() => {
 
     return (
         <div className={cls.Todos}>
-            {todos && todos.map((todo) => (
-                <div className={cls.Todo} key={todo.id}>
+            {todoSlice.todos && todoSlice.todos.map((todo, index) => (
+                <div
+                     className={`${cls.Todo} ${cls[todoSlice.evenFilter ? (index + 1) % 2 === 0 ? 'selected': 'none' : todoSlice.oddFilter ? (index + 1) % 2 === 1 ? 'selected': 'none' : 'none']}`}
+                     key={todo.id}>
                     <input type={'checkbox'} className={cls.todoCheckbox} checked={todo.status} onChange={handleCompleteTodo(todo.id)}/>
                     <div  className={cls.todoTitle}>{todo.todoTitle}</div>
                     {todo.edit && <Input type={"darkness"} placeholder={'Новое название'} value={todoSlice.newTitle} onChange={todoSlice.setNewTitle}/>}
