@@ -1,0 +1,26 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  box-sizing: border-box;
+  box-shadow: none;
+  color: #f1f1f1;
+  background-color: #1b1b1c;
+  line-height: 1.5;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  width: 100%;
+}

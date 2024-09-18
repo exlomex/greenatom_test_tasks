@@ -1,0 +1,34 @@
+.QuoteContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .button {
+    background-color: #a90e31;
+    border: none;
+    width: 150px;
+    height: 35px;
+    cursor: pointer;
+    color: #e5e5e5;
+    font-size: 1em;
+    transition: background-color .3s ease;
+
+    &:hover {
+      background-color: rgb(157, 19, 51);
+    }
+  }
+
+  p {
+    margin-bottom: 15px;
+  }
+
+  .quote_title {
+    display: inline-block;
+    max-width: 700px;
+    text-align: center;
+  }
+
+  .quote_subtitle {
+    font-weight: 500;
+  }
+}
