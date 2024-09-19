@@ -17,7 +17,7 @@
 
 ## Описание
 
-Тестовое задание -  https://clck.ru/3Acaxf
+Тестовое задание -  https://docs.google.com/document/d/1V9OoJDb3ZmAOmSQ8XQKPCAk2Zgko4y39/edit
 
 ### random quote machine
 ![image](https://github.com/user-attachments/assets/0d8dcaed-0bd8-484b-b735-bb677225266b)
